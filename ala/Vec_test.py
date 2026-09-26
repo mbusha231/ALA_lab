@@ -3,46 +3,54 @@ from Vec import Vec
 print("running test cases")
 v_empty = Vec()
 assert v_empty == []
+
 #add
 v1 = Vec([1,2,3])
 v2 = Vec([4,5,6])
 result = v1 + v2
 #print(result)
 assert result == [5,7,9], "add failed"
+
 #sub
 v1 = Vec([4,8,15])
 v2 = Vec([4,5,6])
 result = v1 - v2
 #print (result)
 assert result == [0,3,9], "sub failed"
+
 #rmul
 v1 = Vec([4,3,6])
 scalar = 3
 result = scalar * v1
 #print(result)
 assert result == [12,9,18]
+
 #imul
 v1 = Vec([4,3,6])
 scalar = 2
 v1 *= scalar
 #print(v1)
 assert v1 == [8,6,12]
+
 #repr
 v = Vec([6,4])
 #result_str = repr(v)
 #print(result_str)
 assert v == [6,4]
+
 #len
 v1 = Vec([3,8,0])
 v2 = Vec([1,7,3,13,56,2])
 Vec.__len__(v2)
 assert len(v1) == 3
 assert len(v2) == 6
+
 #neg
 v = Vec([16,-42,-7])
 result = -v
 #print(result)
 assert result == [-16, 42,7]
+
 #radd
 v1 = Vec([23,64,9])
 v2 = Vec([11,63,0])
@@ -80,10 +88,10 @@ assert result_norm == 5
 #mean
 v1 = Vec([3,8,14])
 assert round(v1.mean(), 3) == 8.333
-print(v1.mean())
+#print(v1.mean())
 v2 = Vec([-9, -14, -3])
 assert round(v2.mean(), 3) == -8.667
-print(v2.mean())
+#print(v2.mean())
 
 exception_raised = False
 try:
